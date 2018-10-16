@@ -1,0 +1,130 @@
+html, body {
+  display: grid;
+  font-family: Tahoma,Verdana,sans-serif;
+
+}
+/* NOTE: layout of container class/grid */
+.container {
+  max-height: 70%;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+  "hd st st "
+  "mn mn ls"
+  "mn mn ls"
+  "ft ft ft";
+
+}
+/* NOTE: styling of container class elements: header, subtext, list, main, footer */
+.header {
+  grid-area: hd;
+}
+.subtext {
+  grid-area: st;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  font-size: 50%;
+}
+.main {
+  display: grid;
+  grid-area: mn;
+  padding-top: 15px;
+  margin: 0px;
+
+}
+.list {
+  grid-area: ls;
+  max-width: 100%;
+  min-width: 20%;
+  margin: auto;
+}
+.footer {
+  grid-area: ft;
+  border-top: 3px solid black;
+  color: #3500D3;
+  text-align: left;
+  margin-top: 5px;
+}
+/* NOTE: styling of other elements*/
+img {
+  padding-top: 10px;
+  position: relative;
+  margin: auto;
+  overflow: auto;
+}
+h1 {
+  position: relative;
+  border: solid black;
+  text-align: left;
+  letter-spacing: .80em;
+  background-color: #3500D3;
+  line-height: .9em;
+  font-variant-caps: all-small-caps;
+  margin: 0px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 15px;
+}
+hr {
+  border: 2px solid black;
+  padding-left: 0px;
+  margin: 0;
+}
+.list a:link {
+  text-decoration: none;
+  color: black;
+}
+h2 {
+  max-width: 90%;
+  font-size: 20px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  font-variant-caps: all-small-caps;
+}
+em {
+  color: black;
+  text-align: center;
+}
+.About {
+  display: grid;
+  border-style: dashed;
+  max-width: 100%;
+  background-color: darkgray;
+  margin: auto;
+  align-self: auto;
+}
+p {
+  display: grid;
+  max-width: 80%;
+  color: black;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: auto;
+  margin-left: auto;
+}
+ul {
+  list-style: none;
+  margin: auto;
+}
+li {
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 25px;
+  font-variant-caps: all-small-caps;
+  background-color: lightgray;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon {
+  display: inline;
+  position: sticky;
+  margin-left: 0px;
+  float: right;
+}
