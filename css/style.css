@@ -1,21 +1,25 @@
 html, body {
   display: grid;
   font-family: Tahoma,Verdana,sans-serif;
-
+  min-width: 650px;
 }
 /* NOTE: layout of container class/grid */
 .container {
-  max-height: 70%;
-  display: grid;
+  display: inline-grid;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(9, auto);
   grid-template-areas:
-  "hd st st "
-  "mn mn ls"
-  "mn mn ls"
-  "ft ft ft";
+  "hd st st st st "
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "mn mn mn ls ls"
+  "ft ft ft ft ft";
 
 }
 /* NOTE: styling of container class elements: header, subtext, list, main, footer */
@@ -43,6 +47,7 @@ html, body {
 }
 .footer {
   grid-area: ft;
+  display: grid;
   border-top: 3px solid black;
   color: #3500D3;
   text-align: left;
@@ -50,10 +55,12 @@ html, body {
 }
 /* NOTE: styling of other elements*/
 img {
+  display: inline;
+  resize: both;
+  min-width: 100px;
   padding-top: 10px;
   position: relative;
   margin: auto;
-  overflow: auto;
 }
 h1 {
   position: relative;
